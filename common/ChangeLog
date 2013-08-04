@@ -1,0 +1,60 @@
+2004-07-04  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* vac2nrm.seg, emx2nrm.seg, hc2nrm.seg, makefile:
+	Introduced VAC++, EMX and Metaware
+
+2004-04-09  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* makefile: Wrong modules were picked for the private library.
+
+2003-11-19  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* wcc2nrm.seg: A script to rename Watcom-generated segments.
+
+	* anfalmul.obj, anuldiv.obj, anulmul.asm, anulrem.obj, endsegs.asm, groups.inc, groups32.inc, kprintf.h, libvia.asm, libvia.c, libvia.h, lstr.asm, lstr.h, makefile, parsearg.c, viaprtio.asm:
+	Legal clearance completed.
+
+2003-10-06  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* anfalmul.obj, anulmul.asm, makefile: Added __aNFauldiv
+
+2002-06-23  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* libvia.asm:
+	Fixed the data segment location - should be within DGROUP
+
+2002-06-15  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* vsprintf.c: Cleanup
+
+2002-06-12  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* parsearg.c: Allow for parsing args under DOS.
+
+	* libvia.h: PCI changes
+
+2002-05-24  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* libvia.asm, libvia.h:
+	Changed to use standard wrappers for VIA_in/out APIs
+
+	* lstr.asm, lstr.h, makefile:
+	Moved the lstr* functions to a common library
+
+2002-03-07  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* groups.inc: Allow DevHelp linkage
+
+2002-03-04  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* anulmul.asm, kprintf.c, kprintf.h, parsearg.c, parsearg.h, vsprintf.c, vsprintf.h:
+	New modules here
+
+	* anuldiv.obj, anulrem.obj, endsegs.asm, groups.inc, makefile:
+	User configuration feature added
+
+2002-03-03  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* endsegs.asm, groups.inc, libvia.asm, libvia.h, makefile:
+	New release of VIA libraries
+

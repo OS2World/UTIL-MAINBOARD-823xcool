@@ -1,0 +1,244 @@
+2005-01-06  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* 16chcfg.c, 16init.c, viaapmp.h:
+	Fixed hangs on some of the later 266As (regression from introduction of /THROT in v 2.30).
+
+2004-12-02  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* 16args.c, 16chcfg.c, 16hwmon.c, 16hwmon.h, 16init.c, 16stub.asm, apmctrl.c, externs.c, externs.h, makefile, msdos.c, viaapm.h:
+	V 2.50 (added KT880, segregated the fan control module)
+
+2004-11-11  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* 16args.c, 16chcfg.c, 16init.c, externs.c, externs.h, viaapmp.h:
+	V 2.30 (Implemented the /THROT: parameter)
+
+2004-10-14  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* apmctrl.c, msdos.c, viaapm.h, 16chcfg.c, 16init.c, 16smbus.c:
+	KN266 support (inferred from VT8372 register map)
+
+2004-07-24  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* 16init.c: apm_hdl should be static
+
+2004-07-23  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* 16init.c, makefile: Issue a complete reset upon APM BIOS callbacks
+
+	* 16args.c, externs.c, externs.h:
+	Added /Q for Quiet startup and /V as a shortcut for /VERBOSE
+
+2004-03-16  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* makefile: Added the EXPERIMENTAL option to makefile
+
+2003-11-24  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* viaapm.h: Public version w/o spinup
+
+2003-11-19  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* 16chcfg.c, 16init.c, 16smbus.c, 32util.asm, makefile:
+	Updated for a newer version of VIA PCI library
+
+2003-11-07  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* 16hwmon.c, 16init.c, apmctrl.c, viaapm.h: misc. fixes
+	  related to spin-up/spin-down control
+
+2003-09-10  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* apmctrl.c, makefile, viaapm.h, 16hwmon.c, 16init.c:
+	Added the experimental 'spin-up' feature
+
+2003-06-06  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* 16args.c, 16init.c, externs.c, externs.h, msdos.c:
+	Added /!HLT for ACPI-only operation
+
+	* 16chcfg.c:
+	Fixed KX133 support (still will fail on MOST KX133 solutions)
+
+2003-01-31  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* apmctrl.c: YATF
+
+2003-01-24  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* 16smbus.c: YATF in SMBus address calculations
+
+2003-01-13  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* msdos.c, 16init.c, 16hwmon.c:
+	Maint. release 2.12 (features a newer APM_NH.SYS)
+
+	* msdos.c: Include vsprintf.h for correct prototypes
+
+2003-01-09  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* 16hwmon.c: More fixes for startup duty cycle calculation
+
+2003-01-06  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* 16init.c, msdos.c, 16chcfg.c: Guess-work regarding VT8377
+
+	* 16hwmon.c:
+	Allow to stop the fan completely during startup if the rise cycle permits 0
+	(regression from v 2.06).
+
+2002-11-20  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* doc/readme.txt: Release 2.10
+
+2002-11-02  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* doc/readme.txt: Updates
+
+	* 16chcfg.c, 16init.c, msdos.c, viaapm.h:
+	Added support for VT8235 (newer KT333 and possibly some KT400 chipsets)
+
+2002-10-15  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* patchram.c: Buffer should be unsigned
+
+2002-08-28  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* 16init.c: Version 2.06
+
+	* 16hwmon.c:
+	Duty cycle of 0 can no longer be chosen for initial rise course
+
+2002-08-07  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* 16init.c: Repackaged 2.05 with newer APM_NH.SYS as 2.05b
+
+2002-07-09  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+        * apm_nh.sys: Updated to level 10.073
+
+2002-06-30  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+        * Version 2.05
+
+	* makefile: Packaging fix (LIBPCIDR.LIB was garbled)
+
+2002-06-27  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* 16init.c: VIAAPM_CMD_RESET wasn't functional in 2.0x - fixed
+
+	* det_x86.asm, makefile: Detect 386 before using it
+
+	* msdos.c: Provided concise response to help switch
+
+2002-06-23  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* 16hwmon.c, 16init.c, externs.c, externs.h, makefile, 16args.c:
+	Added POST output
+
+	* msdos.c: YATF
+
+2002-06-22  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* viaapm.h: Added KT333 under KT266
+
+	* 16chcfg.c, 16hwmon.c, 16init.c:
+	Experimental fix: don't touch IF at interrupt time
+
+2002-06-21  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* 16hwmon.c, 16init.c: YATF
+
+2002-06-14  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* 16hwmon.c, 16init.c:
+	Changed to not report raise of duty cycle when started with min. duty cycle
+
+2002-06-13  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* 16hwmon.c, 16init.c, apmctrl.c, viaapm.h:
+	Added min/max temperature logging
+
+	* msdos.c: YATF
+
+	* makefile: Version 2.00
+
+	* 16stub.asm, 32util.asm, apmctrl.c, externs.c, externs.h, install.c, makefile, msdos.c, viaapm.h, 16chcfg.c, 16chcfg.h, 16init.c, 16smbus.c, 16smbus.h:
+	Added a DOS-based driver
+
+2002-06-12  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* 16pll.c: Fixed crashes when reprogramming the PLL in a busy system
+
+	* 16hwmon.c, 16init.c: CPU temperature was incorrectly determined
+
+2002-06-09  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* apmctrl.c: Fixed errors when invoked with /NODBG
+
+2002-06-08  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* viaapm.h, 16init.c, apmctrl.c: Version 1.99.02
+
+	* 16pll.c, 16pll.h: Added hibernation support
+
+	* 16hwmon.c, 16hwmon.h: Fixed the CPU fan identification
+
+2002-05-31  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* 16args.c, 16args.h, 16hwmon.c, 16hwmon.h, 16pll.c, 16pll.h, 16smbus.c, 16smbus.h, externs.c, externs.h, viaapmp.h, 32util.asm, apmctrl.c, install.c, makefile, patchram.h, viaapm.h, 16init.c:
+	Version 1.99 batch
+
+	* apmctrl.c: Last interpolation-enabled version
+
+2002-05-27  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* 16init.c, apmctrl.c, makefile, viaapm.h: Preliminary check-in
+
+2002-05-22  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* apmctrl.c, viaapm.h, 16init.c: Implemented the support for KX133
+
+2002-04-30  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* 16init.c, apmctrl.c, makefile, viaapm.h:
+	Added IOCTL validation, chipset query and APM_NH cascade hooks
+
+2002-03-14  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* makefile: Added ChangeLog to distribution
+
+2002-03-11  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* makefile: contrib was not included
+
+2002-03-08  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* makefile: Build fix
+
+	* 16init.c, 32util.asm, install.c, makefile: YATFs
+
+2002-03-07  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* 16init.c: Added the 0305 chip
+
+2002-03-06  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* makefile: Packaging fix
+
+	* install.c, 16init.c: Fixed installation in OS/2 v 4.5 kernels
+
+2002-03-04  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* makefile: Final
+
+	* apmctrl.c: YATF
+
+	* 16end.asm, 16first.c, 16init.c, 16to32.asm, 32util.asm, apmctrl.c, groups.inc, install.c, makefile, patchram.h, viaapm.h:
+	APM works underway
+
+2002-03-02  Andrew Belov  <andrew_belov@mtu-net.ru>
+
+	* 16end.asm, 16first.c, 16init.c, 16to32.asm, 32util.asm, groups.inc, install.c, makefile, patchram.c, patchram.h, std32.h:
+	Initial test version
+
